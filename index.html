@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hello, world!</title>
+	<style>
+	#myProgress {
+	width: 100%;
+	background-color: #ddd;
+	}
+	#myBar {
+	width: 1%;
+	height: 30px;
+	background-color: #4CAF50;
+	}
+	.scrolujesz {
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+	</style>
+</head>
+<body>
+    <h1 id="hello" onmouseover="mouseOver()" onmouseout="mouseOut()">Hello,world!</h1>
+	<br>
+	<button type="button" class="btn btn-primary">
+     Notifications <span class="badge badge-light"></span>
+    </button>
+    <div class="test-cnt">Tutaj zaraz coś wstawimy</div>
+	<button class="button" type="button">Stwórz nowy element</button>
+	<p class="textNodeTest"><strong></strong></p>
+	<button class="button btn-textNodeTest">Zmień teksty</button>
+	<p id="xd" class="xxd">Jakis tekst</p>
+	<a href="" onclick="wstaw();return false;">Wstaw tekst</a>
+	<table id="tabelka" border="10px">
+		<tr>
+			<td>xd</td><td>xD</td>
+		</tr>
+		<tr>
+			<td>Xd</td><td>XD</td>
+		</tr>
+	</table>
+	</script><div class="div-test-remove">
+    <p>Element do usunięcia</p>
+	<button type="button" class="buttonn">Usuń powyższy element do usunięcia</button>
+	</div>
+	<p id="czas"></p>
+	<p id="dzisiejsza_data"></p>
+	<button onclick="myFunction()">Try it</button>
+	<p id="dzialanie"></p>
+	<progress id="myProgress" class="progress-bar" value="50" max="100" ></progress>
+	<h1>JavaScript Progress Bar</h1>
+	<div id="myProgress">
+	<div id="myBar"></div>
+	</div>
+	<button onclick="move()">Click Me</button> 
+	<p class="jakasklasa">
+	Lorem Ipsum </p>
+	<button onclick="zmianakoloru()">Click Me</button>
+	<ul id="mojaLista">
+		<li>Maluch</li>
+		<li>Porshe</li>
+	</ul>
+	<div onscroll="scrolowanko()" class="scrolujesz">
+	In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+<br><br>
+'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+	</div>
+	<p>Scrolawles <span id="ilescroli">0</span> razy.</p>
+	<button onclick="h1zmien()">Zmien h1</button>
+	<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+	<button onclick="repleece()">Zamien element listy</button>
+	<p><abbr id="myAbbr" title="World Health Organization">WHO</abbr> </p>
+	<button onclick="tytul()">Rozwin skrot</button>
+	<p id="rozwiniecie"></p>
+	<button onclick="niespodzienka()">Niespodzianka!</button>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+	//Skrypt 1
+   var x = document.getElementsByClassName("badge-light");
+   x[0].innerHTML = 9; // x[0] to pierwszy znaleziony element/8//
+   // Skrypt 2
+   document.querySelector('.button').addEventListener('click', function() {
+		let html = `
+			<div class="module">
+			<div>To jest <strong>dynamicznie wstawiony element</strong>:</div>
+			<button type="button" class="btn btn-danger" disabled>Danger</button>
+			<button type="button" class="btn btn-success" disabled>Success</button>
+			</div>`;
+		document.querySelector('.test-cnt').innerHTML = html;});
+	</script>
+	<script>
+	// Skrypt 3
+	const p = document.querySelector(".textNodeTest");
+    const btn = document.querySelector('.btn-textNodeTest');
+    const word1 = document.createTextNode("Pancerniki");
+    p.appendChild(word1);
+    const strong = document.createElement("strong");
+    strong.innerText = " są "; 
+    p.appendChild(strong);
+    const word2 = document.createTextNode("slodkie");
+    p.appendChild(word2);
+    btn.addEventListener("click", function() {
+        console.dir(word1); 
+        word1.nodeValue = "Pancerniki też";
+        word2.nodeValue = "super!";
+     });
+	//Skrypt 4
+	function wstaw(){
+		document.getElementById('xd').innerHTML="Nowy tekst";
+	}
+	//Skrypt 5
+	document.addEventListener("DOMContentLoaded", function() {
+    const tab = document.getElementById('tabelka');
+    const td = tab.getElementsByTagName('td');
+    for (let i=0; i<td.length; i++) {
+        td[i].style.backgroundColor = 'red'; 
+		td[i].style.color='white';
+		td[i].style.width='100px';
+		td[i].style.height='100px';
+    }
+	});
+	//Skrypt 6
+	document.addEventListener("DOMContentLoaded", function() {
+    const paragraf = document.getElementsByClassName('xxd');
+    for (let i=0; i<paragraf.length; i++) { 
+        paragraf[i].style.background = "pink";
+    }
+	});
+	//Skrypt 7
+	const div = document.querySelector(".div-test-remove")
+	const btnn = document.querySelector(".buttonn");
+	btnn.addEventListener("click", function() {
+		const elementToDelete = div.querySelector("p");
+		div.removeChild(elementToDelete);
+	});
+	//Skrypt 8
+	var d = new Date();
+	document.getElementById("czas").innerHTML = d;
+	//Skrypt 9
+	var d = new Date();
+	var x=d.getMonth()+1;
+	document.getElementById("dzisiejsza_data").innerHTML = "Dziszejszaa data: "+d.getDate()+"."+x+"."+d.getFullYear();
+	//Skrypt 9
+	function myFunction() {
+		var y = 5;
+		var x = y + 2;
+		document.getElementById("dzialanie").innerHTML ="5+2="+ x;
+	}
+	//Skrypt 10
+	x=document.getElementsByClassName('progress-bar');
+	width=60;
+	x[0].style.width=width + "%";
+	//Skrypt 11
+	var i = 0;
+	function move() {
+		if (i == 0) {
+			i = 1;
+			var elem = document.getElementById("myBar");
+			var width = 1;
+			var id = setInterval(frame, 10);
+			function frame() {
+				if (width >= 100) {
+				clearInterval(id);
+				i = 0;
+			} else {
+					width++;
+					elem.style.width = width + "%";
+					}
+							}
+					  }
+					  }
+	//Skrypt 12
+	function zmianakoloru()
+	{
+	var x;
+	x=document.querySelector(".jakasklasa");
+	x.style.background="red";
+	}
+	//Skrypt 13
+	var node=document.createElement("li");
+	var text=document.createTextNode("Fiat");
+	node.appendChild(text);
+	document.getElementById('mojaLista').appendChild(node);
+	//Skrypt 14
+	function mouseOver(){
+	document.getElementById("hello").style.color="red";
+	}
+	//Skrypt 15
+	function mouseOut(){
+	document.getElementById("hello").style.color="blue";
+	}
+	//Skrypt 16
+	var xscroll = 0;
+	function scrolowanko() {
+	document.getElementById("ilescroli").innerHTML = xscroll += 1;
+	}
+	//Skrypt 17
+	function h1zmien() {
+	var o = document.getElementsByTagName("h1")[0];
+	o.outerHTML = "h1 zmienieniony!";
+}
+	//Skrypt 18
+	function repleece() {
+	var textnode = document.createTextNode("Water");
+	var item = document.getElementById("myList").childNodes[0];
+	item.replaceChild(textnode, item.childNodes[0]);
+}
+	//Skrypt 19
+	function tytul() {
+	var x = document.getElementById("myAbbr").title;
+	document.getElementById("rozwiniecie").innerHTML = x;
+	}
+	//Skrypt 20
+	function niespodzienka() {
+	document.open();
+	document.write("<h1>Hello World</h1>");
+	document.close();
+}
+</script>
+	
+</body>
+</html>
